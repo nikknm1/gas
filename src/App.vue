@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Главная страница</router-link> |
+      <router-link to="/history">Страница истории</router-link> |
+      <router-link :to="{ name: 'History', params: { type: 'add' }}"> История добавлений </router-link> |
+      <router-link :to="{ name: 'History', params: { type: 'remove' }}"> История удалений </router-link>
     </div>
     <router-view/>
   </div>
